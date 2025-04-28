@@ -1,29 +1,54 @@
 import { Routes } from '@angular/router';
-import { HeroDetailComponent } from './hero-detail/hero-detail.component';
-import { HeroesComponent } from './heroes/heroes.component';
-import { AppComponent } from './app.component';
-import { MessagesComponent } from './messages/messages.component';
+import { HistoryComponent } from './history/history.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
+import { UserAccountsComponent } from './user-accounts/user-accounts.component';
+import { LocationsAndPrintersComponent } from './locations-and-printers/locations-and-printers.component';
+import { PrintersComponent } from './printers/printers.component';
+import { ConnectorsComponent } from './connectors/connectors.component';
+import { CompanyProfileComponent } from './company-profile/company-profile.component';
+import { StaffResourcesComponent } from './staff-resources/staff-resources.component';
+import { WcagGuidelinesComponent } from './wcag-guidelines/wcag-guidelines.component';
 
 export const routes: Routes = [
   {
     path: '',
-    redirectTo: 'app',
+    redirectTo: 'wcag-guidelines',
     pathMatch: 'full',
   },
   {
-    path: 'app',
-    component: AppComponent,
+    path: 'wcag-guidelines',
+    component: WcagGuidelinesComponent,
   },
   {
-    path: 'hero-detail',
-    component: HeroDetailComponent,
+    path: 'dashboard',
+    component: DashboardComponent,
   },
   {
-    path: 'heroes',
-    component: HeroesComponent,
+    path: 'history',
+    component: HistoryComponent,
   },
   {
-    path: 'messages',
-    component: MessagesComponent,
+    path: 'user-accounts',
+    component: UserAccountsComponent,
+  },
+  {
+    path: 'locations-and-printers',
+    component: LocationsAndPrintersComponent,
+  },
+  {
+    path: 'printers',
+    component: PrintersComponent,
+  },
+  {
+    path: 'connectors',
+    component: ConnectorsComponent,
+  },
+  {
+    path: 'company-profile',
+    component: CompanyProfileComponent,
+  },
+  {
+    path: 'staff-resources',
+    component: StaffResourcesComponent,
   },
 ];

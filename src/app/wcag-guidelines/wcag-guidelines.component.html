@@ -1,0 +1,13 @@
+<div *ngIf="guidelines && guidelines.length > 0; else noGuidelines">
+  <div *ngFor="let guideline of guidelines" class="guideline-item">
+    <h3>
+      {{ guideline.id }} - {{ guideline.title }}
+      <span class="level">Level {{ guideline.level }}</span>
+    </h3>
+    <p>{{ guideline.description }}</p>
+    <img [src]="guideline.imageUrl" alt="" />
+  </div>
+</div>
+<ng-template #noGuidelines>
+  <p>No guidelines available.</p>
+</ng-template>

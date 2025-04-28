@@ -1,3 +1,49 @@
-<h1>{{ title }}</h1>
-<app-heroes></app-heroes>
-<app-messages></app-messages>
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark">
+  <div class="container-fluid">
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#mynavbar"
+    >
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="mynavbar">
+      <ul class="navbar-nav me-auto">
+        <li class="nav-item">
+          <a class="nav-link active" routerLink="wcag-guidelines"
+            >WCAG 2.2 Guidelines</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="dashboard">Dashboard</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="history">History</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="user-accounts">User Accounts</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="locations-and-printers"
+            >Locations & Printers</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="printers">Printers</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="connectors">Connectors</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="company-profile">Company Profile</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" routerLink="staff-resources">Staff Resources</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<router-outlet></router-outlet>

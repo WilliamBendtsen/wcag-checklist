@@ -1,18 +1,18 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { HeroesComponent } from './heroes.component';
+import { WcagGuidelinesComponent } from './wcag-guidelines.component';
 
-describe('HeroesComponent', () => {
-  let component: HeroesComponent;
-  let fixture: ComponentFixture<HeroesComponent>;
+describe('WcagGuidelinesComponent', () => {
+  let component: WcagGuidelinesComponent;
+  let fixture: ComponentFixture<WcagGuidelinesComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [HeroesComponent]
+      imports: [WcagGuidelinesComponent]
     })
     .compileComponents();
 
-    fixture = TestBed.createComponent(HeroesComponent);
+    fixture = TestBed.createComponent(WcagGuidelinesComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });
