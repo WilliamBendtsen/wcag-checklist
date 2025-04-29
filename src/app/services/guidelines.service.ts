@@ -16,51 +16,6 @@ export class GuidelinesService {
       imageUrl: '/images/111-example.png',
     },
     {
-      id: '1.2.1',
-      title: 'Audio-only and Video-only (Pre-recorded)',
-      description:
-        'An alternative for time-based media is provided that presents equivalent information for prerecorded audio-only/video-only content',
-      level: 'A',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '1.2.2',
-      title: 'Captions (Pre-recorded)',
-      description:
-        'Captions are provided for all prerecorded audio content in synchronized media, except when the media is a media alternative for text and is clearly labeled as such',
-      level: 'A',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '1.2.3',
-      title: 'Audio Description or Media Alternative (Pre-recorded)',
-      description:
-        'An alternative for time-based media or audio description of the prerevorde video content is provided for synchronized media, except when the media is a media alternative for text and is clearly labeled as such',
-      level: 'A',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '1.2.4',
-      title: 'Captions (Live)',
-      description:
-        'Captions are provided in all live audio content in synchronized media',
-      level: 'AA',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '1.2.5',
-      title: 'Audio Description (Pre-recorded)',
-      description:
-        'Audio description is provided for all prerecorded video content in synchronized media',
-      level: 'AA',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
       id: '1.3.1',
       title: 'Info and Relationships',
       description:
@@ -102,7 +57,7 @@ export class GuidelinesService {
       description:
         'The purpose of each input field collecting information about the user can be programatically determined',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -110,15 +65,6 @@ export class GuidelinesService {
       title: 'Use of Color',
       description:
         'Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element',
-      level: 'A',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '1.4.2',
-      title: 'Audio Control',
-      description:
-        'If any audio on a web page plays automatically for more than 3 seconds, either a mechanism is available to pause or stop the audio, or a mechanism is available to control audio volume independently from the overall system volume level',
       level: 'A',
       applicableTo: ['dashboard', '', ''],
       imageUrl: '',
@@ -210,7 +156,7 @@ export class GuidelinesService {
       description:
         'If a keyboard shortcut is implemented in content using only letter (includint upper- and lower-case letters), punctuation, number, ot symbol characters, then at least on of the following is true* (Turn off, remap, Active only on focus)',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -219,7 +165,7 @@ export class GuidelinesService {
       description:
         'For each time limit that is set by the content, at least one of the following is true* (Turn off, Adjust, Extend, Real-time Exception)',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -237,7 +183,7 @@ export class GuidelinesService {
       description:
         'Web pages do not contain anything that flashes more than three times in any one second period, or the flash is below the general flash and red flash threshholds',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -246,12 +192,12 @@ export class GuidelinesService {
       description:
         'A mechanism is available to bypass blocks of content that are repeated on multiple web pages',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
       id: '2.4.2',
-      title: 'Page TitleD',
+      title: 'Page Titled',
       description: 'Web pages have titles that describe topic or purpose',
       level: 'A',
       applicableTo: ['dashboard', '', ''],
@@ -272,7 +218,7 @@ export class GuidelinesService {
       description:
         'The purpose of each link can be determined from the link text aline or from the link text together with its programatically determined link context, except where the purpose of the link would be ambiguous to users in general',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -316,7 +262,7 @@ export class GuidelinesService {
       description:
         'All functionality that uses multipoint or path-based gestures for operation can be operated with a single pointer without a path-based gesture, unless a multipoint or path-based gesture is essential',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -343,7 +289,7 @@ export class GuidelinesService {
       description:
         'Functionality that can be operated by device motion or user motion can also be operated by user interface components and responding to the motion can be disabled to prevent accidental actuation, except when:* (Supported Interface, Essential)',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -352,7 +298,7 @@ export class GuidelinesService {
       description:
         'All functionality that uses a dragging movement for operation can be achieved by a single pointer without dragging, unless dragging is essential or the functionality is determined by the user agent and not modified by the author',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -424,7 +370,7 @@ export class GuidelinesService {
       description:
         'If a web page contains any of the following help mechanisms, and those mechanisms are repeated on multiple web pages within a set of web pages, they occur in the same order relative to other page content, unless a change is initiated by the user* (Human contact details, Human contact mechanism, Self-help option, A fully automated contact mechanism)',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -451,16 +397,7 @@ export class GuidelinesService {
       description:
         'If an input error is automatically detected and suggestions for correction are known, then the suggestions are provided to the user, unless it would jeopardize the security or purpose of the content',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '',
-    },
-    {
-      id: '3.3.4',
-      title: 'Error Prevention (Legal, Financial, Data)',
-      description:
-        'For web pages that cause legal commitments or financial transactions for the user to occur, that modify or delete user-controllable data in data storage systems, or that submit user test responses, at least on of the following is true* (Reversible, Checked, Confirmed)',
-      level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -478,7 +415,7 @@ export class GuidelinesService {
       description:
         'A cognitive function test (such as remembering a password or solving a puzzle) is not required for any step in an authentication process unless that step provides at least on of the following* (Alternative, Mechanism, Object Recognition, Personal Content)',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -499,7 +436,11 @@ export class GuidelinesService {
       applicableTo: ['dashboard', '', ''],
       imageUrl: '',
     },
-  ];
+  ].map((g) => ({
+    ...g,
+    level: g.level as 'A' | 'AA' | 'AAA',
+    category: this.getCategoryById(g.id),
+  }));
 
   getAllGuidelines(): Guideline[] {
     return this.guidelines;
@@ -507,5 +448,23 @@ export class GuidelinesService {
 
   getGuidelinesForPage(page: string): Guideline[] {
     return this.guidelines.filter((g) => g.applicableTo.includes(page));
+  }
+
+  private getCategoryById(
+    id: string
+  ): 'Perceivable' | 'Operable' | 'Understandable' | 'Robust' {
+    const mainSection = id.split('.')[0];
+    switch (mainSection) {
+      case '1':
+        return 'Perceivable';
+      case '2':
+        return 'Operable';
+      case '3':
+        return 'Understandable';
+      case '4':
+        return 'Robust';
+      default:
+        throw new Error(`Unknown guideline id prefix: ${id}`);
+    }
   }
 }

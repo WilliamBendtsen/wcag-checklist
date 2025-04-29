@@ -16,6 +16,8 @@ h2 {
 }
 
 .guideline-item {
+  display: flex;
+  gap: 7rem;
   margin-bottom: 24px;
   padding: 16px;
   border-radius: 8px;
@@ -29,13 +31,20 @@ h2 {
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
 }
 
+.guideline {
+  display: flex;
+  flex-direction: column;
+  max-width: 75%;
+  gap: 1rem;
+}
+
 h3 {
   color: #1e40af;
   margin-top: 0;
   margin-bottom: 8px;
   font-size: 18px;
   display: flex;
-  justify-content: space-between;
+  gap: 1rem;
   align-items: center;
 }
 

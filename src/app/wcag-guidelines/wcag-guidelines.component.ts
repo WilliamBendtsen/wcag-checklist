@@ -3,6 +3,11 @@ import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
 import { NgFor, NgIf } from '@angular/common';
 
+interface GuidelineGroup {
+  category: string;
+  items: Guideline[];
+}
+
 @Component({
   selector: 'app-wcag-guidelines',
   standalone: true,
@@ -11,11 +16,27 @@ import { NgFor, NgIf } from '@angular/common';
   styleUrls: ['./wcag-guidelines.component.css'],
 })
 export class WcagGuidelinesComponent implements OnInit {
-  guidelines: Guideline[] = [];
+  groupedGuidelines: GuidelineGroup[] = [];
 
   constructor(private guidelinesService: GuidelinesService) {}
 
   ngOnInit(): void {
-    this.guidelines = this.guidelinesService.getAllGuidelines();
+    const guidelines = this.guidelinesService.getAllGuidelines();
+
+    const groups: { [category: string]: Guideline[] } = {};
+
+    for (const g of guidelines) {
+      if (!groups[g.category!]) {
+        groups[g.category!] = [];
+      }
+      groups[g.category!].push(g);
+    }
+
+    this.groupedGuidelines = Object.entries(groups).map(
+      ([category, items]) => ({
+        category,
+        items,
+      })
+    );
   }
 }
