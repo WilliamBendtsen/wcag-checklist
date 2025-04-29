@@ -8,17 +8,23 @@ import { ConnectorsComponent } from './connectors/connectors.component';
 import { CompanyProfileComponent } from './company-profile/company-profile.component';
 import { StaffResourcesComponent } from './staff-resources/staff-resources.component';
 import { WcagGuidelinesComponent } from './wcag-guidelines/wcag-guidelines.component';
+import { Guideline111Component } from './guideline-details/guideline-111/guideline-111.component';
 
 export const routes: Routes = [
+  /* Default redirect */
   {
     path: '',
     redirectTo: 'wcag-guidelines',
     pathMatch: 'full',
   },
+
+  /* Landing page */
   {
     path: 'wcag-guidelines',
     component: WcagGuidelinesComponent,
   },
+
+  /* Pages */
   {
     path: 'dashboard',
     component: DashboardComponent,
@@ -50,5 +56,11 @@ export const routes: Routes = [
   {
     path: 'staff-resources',
     component: StaffResourcesComponent,
+  },
+
+  /* Guidelines details pages */
+  {
+    path: 'guidelines/1.1.1',
+    component: Guideline111Component,
   },
 ];

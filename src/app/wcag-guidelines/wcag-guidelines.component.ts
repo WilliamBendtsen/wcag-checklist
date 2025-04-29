@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
 import { NgFor, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 interface GuidelineGroup {
   category: string;
@@ -11,7 +12,7 @@ interface GuidelineGroup {
 @Component({
   selector: 'app-wcag-guidelines',
   standalone: true,
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './wcag-guidelines.component.html',
   styleUrls: ['./wcag-guidelines.component.css'],
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
 import { NgFor, NgIf } from '@angular/common';
@@ -11,7 +11,7 @@ interface GuidelineGroup {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgFor, NgIf],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
