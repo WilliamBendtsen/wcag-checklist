@@ -12,8 +12,8 @@ export class GuidelinesService {
       description:
         'All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
-      imageUrl: '/images/111-example.png',
+      applicableTo: ['dashboard', 'history', ''],
+      imageUrl: '/images/dashboard/dashboard-111-example.png',
     },
     {
       id: '1.3.1',
@@ -21,7 +21,7 @@ export class GuidelinesService {
       description:
         'Information, structure, and relationships conveyed through presentation can be programatically determined or are available in text',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['dashboard', 'history', ''],
       imageUrl: '',
     },
     {

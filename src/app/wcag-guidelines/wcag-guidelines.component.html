@@ -1,3 +1,4 @@
+<h1>WCAG Guidelines For 'admp'</h1>
 <div *ngIf="groupedGuidelines.length > 0; else noGuidelines">
   <div *ngFor="let group of groupedGuidelines" class="guideline-group">
     <h2 class="group-header">{{ group.category }}</h2>
@@ -12,7 +13,6 @@
         <span class="level">Level {{ guideline.level }}</span>
       </h3>
       <p>{{ guideline.description }}</p>
-      <strong>Expand</strong>
     </div>
   </div>
 </div>

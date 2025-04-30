@@ -1,1 +1,27 @@
-<p>staff-resources works!</p>
+<h2>WCAG 2.2 Guidelines for "Staff Resources"</h2>
+<div *ngIf="groupedGuidelines.length > 0; else noGuidelines">
+  <div *ngFor="let group of groupedGuidelines" class="guideline-group">
+    <h2 class="group-header">{{ group.category }}</h2>
+
+    <div
+      *ngFor="let guideline of group.items"
+      class="guideline-item"
+      [routerLink]="['/guidelines', guideline.id]"
+    >
+      <div class="guideline">
+        <h3>
+          {{ guideline.id }} - {{ guideline.title }}
+          <span class="level">Level {{ guideline.level }}</span>
+        </h3>
+        <p>{{ guideline.description }}</p>
+      </div>
+      <div class="example">
+        <p>Example:</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<ng-template #noGuidelines>
+  <p>No guidelines available for this page.</p>
+</ng-template>
