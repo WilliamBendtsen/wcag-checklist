@@ -4,8 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-guideline-111',
   imports: [],
   templateUrl: './guideline-111.component.html',
-  styleUrl: './guideline-111.component.css'
+  styleUrl: './guideline-111.component.css',
 })
-export class Guideline111Component {
-
-}
+export class Guideline111Component {}
