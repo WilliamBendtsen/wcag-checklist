@@ -13,7 +13,7 @@ export class GuidelinesService {
         'All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.',
       level: 'A',
       applicableTo: ['dashboard', 'history', ''],
-      imageUrl: '/images/dashboard/dashboard-111-example.png',
+      imageUrl: '',
     },
     {
       id: '1.3.1',
@@ -21,7 +21,7 @@ export class GuidelinesService {
       description:
         'Information, structure, and relationships conveyed through presentation can be programatically determined or are available in text',
       level: 'A',
-      applicableTo: ['dashboard', 'history', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -30,7 +30,7 @@ export class GuidelinesService {
       description:
         'When the sequence in which content is presented affects its meaning, a correct reading sequence can be programatically determined',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -39,7 +39,7 @@ export class GuidelinesService {
       description:
         'Instructions provided for understanding and operating content do not rely solely on sensory characteristics of components such as shape, color, size, visual location, orientation, or sound',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -48,7 +48,7 @@ export class GuidelinesService {
       description:
         'Content does not restrict its view and operation to a single display orientation, such as portrait or landscape, unless a specific display orientation is essential',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -66,7 +66,7 @@ export class GuidelinesService {
       description:
         'Color is not used as the only visual means of conveying information, indicating an action, prompting a response, or distinguishing a visual element',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -75,7 +75,7 @@ export class GuidelinesService {
       description:
         'The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, with a few exceptions*',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -84,7 +84,7 @@ export class GuidelinesService {
       description:
         'Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -93,7 +93,7 @@ export class GuidelinesService {
       description:
         'If the technologies being used can achieve the visual presentation, text is used to convey information rather than images of text, with a few exceptions*',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -102,7 +102,7 @@ export class GuidelinesService {
       description:
         'Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for vertical and horizontal scrolling',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -111,16 +111,16 @@ export class GuidelinesService {
       description:
         'The visual presentation of the following have a contrast ratio of at least 3:1 against adjacent color(s)* (User Interface Components & Graphical Objects)',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
       id: '1.4.12',
       title: 'Text Spacing',
       description:
-        'In content implemented using maekup languages that support the following text style properties, no loss of conten or functionality occurs by setting all of the following and by changing no other style property* (Line height, Spacing, Letter spacing, Word spacing)',
+        'In content implemented using markup languages that support the following text style properties, no loss of conten or functionality occurs by setting all of the following and by changing no other style property* (Line height, Spacing, Letter spacing, Word spacing)',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -129,7 +129,7 @@ export class GuidelinesService {
       description:
         'Where recieving and then removing pointer hover or keyboard focus triggers additional content to become visible and then hidden, the following are true* (Dismissible, Hoverable, Persistent)',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -138,7 +138,7 @@ export class GuidelinesService {
       description:
         'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the users movement, and not just the endpoints',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -147,7 +147,7 @@ export class GuidelinesService {
       description:
         'If keyboard focus can be moved to a component of the page using a keyboard interface, then focus can be moved away from that component using only a keyboard interface, and, if it requires more than unmodified arrow or tab keys or other standard exit methods, the user is advised of the method for moving focus away',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -174,7 +174,7 @@ export class GuidelinesService {
       description:
         'For moving, blinking, scrolling or auto-updating information, all of the following are true* (Moving blinking scrolling, Auto-updating',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -200,7 +200,7 @@ export class GuidelinesService {
       title: 'Page Titled',
       description: 'Web pages have titles that describe topic or purpose',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -209,7 +209,7 @@ export class GuidelinesService {
       description:
         'If a web page can be navigated sequentially and the navigation sequences affect meaning or operation, focusable components recieve focus in an order that preserves meaning and operability',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -227,7 +227,7 @@ export class GuidelinesService {
       description:
         'More than ony way is available to locate a web page within a set of web pages except where the web page is the result of, or a step in, a process',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -235,7 +235,7 @@ export class GuidelinesService {
       title: 'Headings and Labels',
       description: 'Heading and labels describe topic or purpose',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -244,7 +244,7 @@ export class GuidelinesService {
       description:
         'Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -253,7 +253,7 @@ export class GuidelinesService {
       description:
         'When a user interface component revieces keyboard focus, the component is not entirely hidden due to author-created content',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -271,7 +271,7 @@ export class GuidelinesService {
       description:
         'For functionality that can be operated using a single pointer, at least one of the following is true* (No Down-Event, Abort or Undo, Up Reversal, Essential)',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -280,7 +280,7 @@ export class GuidelinesService {
       description:
         'For user interface components with labels that include text or images or text, the name contains the text that is presented visually',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -307,7 +307,7 @@ export class GuidelinesService {
       description:
         'The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except when* (Spacing, Equivalent, Inline, User Agent Control, Essential)',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -316,7 +316,7 @@ export class GuidelinesService {
       description:
         'The default human language of each web page can be programatically determined',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -325,7 +325,7 @@ export class GuidelinesService {
       description:
         'The human language of each passage or phrase in the content can be programatically determined except for proper names, technical terms, words or indeterminate language, and words or phrases that have become part of the vernacular of the immideately surrounding text',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -334,7 +334,7 @@ export class GuidelinesService {
       description:
         'When any user interface component recieves focus, it does not initiate a change of context',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -343,7 +343,7 @@ export class GuidelinesService {
       description:
         'Changing the setting of any user interface component does not automatically cause a change of context unless the user has been advised of the behavior before using the component',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -352,7 +352,7 @@ export class GuidelinesService {
       description:
         'Navigational mechanisms that are repeated on multiple web pages within a set of web pages occur in the same relative order each time they are repeated, unless a change is initiated by the user',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -361,7 +361,7 @@ export class GuidelinesService {
       description:
         'Components that have the same functionality within a set of web pages are identified consistently',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -379,7 +379,7 @@ export class GuidelinesService {
       description:
         'If an input error is automatically detected, the item that is in error is identified and the error is described to the user in text',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -388,7 +388,7 @@ export class GuidelinesService {
       description:
         'Labels or instructions are provided when content requires user input',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -406,7 +406,7 @@ export class GuidelinesService {
       description:
         'Information previously entered by or provided to the user that is required to be entered again in the same process is either* (Auto-populated, Available for the user to select), with a few exceptions*',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -424,7 +424,7 @@ export class GuidelinesService {
       description:
         'For all user interface components, the name and role can be programatically determined; states, properties, and values that can be set by the user can be programatically set; and notification of changes to these items is available to user agents, including assisstive technologies',
       level: 'A',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
     {
@@ -433,7 +433,7 @@ export class GuidelinesService {
       description:
         'In content implemented using markup languages, status messages can be programatically determined through role or properties such that they can be presented to the user by assisstive technologies without recieving focus',
       level: 'AA',
-      applicableTo: ['dashboard', '', ''],
+      applicableTo: ['', '', ''],
       imageUrl: '',
     },
   ].map((g) => ({

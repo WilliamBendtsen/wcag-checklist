@@ -8,16 +8,12 @@
       class="guideline-item"
       [routerLink]="['/guidelines', guideline.id]"
     >
-      <div class="guideline">
+      <div>
         <h3>
           {{ guideline.id }} - {{ guideline.title }}
           <span class="level">Level {{ guideline.level }}</span>
         </h3>
         <p>{{ guideline.description }}</p>
-      </div>
-      <div class="example">
-        <p>Example:</p>
-        <img [src]="guideline.imageUrl" alt="Criterion Example Image" />
       </div>
     </div>
   </div>

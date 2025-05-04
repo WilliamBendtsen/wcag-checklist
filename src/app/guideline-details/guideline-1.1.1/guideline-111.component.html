@@ -1,69 +1,80 @@
-<div class="guideline-detail">
+<main class="guideline-detail">
   <!-- Header section -->
-  <div class="guideline-header">
+  <section class="guideline-header">
     <div class="guideline-title-container">
       <h1 class="guideline-title">1.1.1 - Non-text content</h1>
     </div>
-  </div>
+  </section>
 
-  <!-- Tab content -->
-  <div>
-    <!-- Understanding tab -->
-    <div>
-      <div class="content-card">
-        <p class="guideline-description">
-          The purpose of this guideline is to ensure that all non-text content
-          is also available in text. "Text" refers to electronic text, not an
-          image of text. Electronic text has the unique advantage that it is
-          presentation neutral. That is, it can be rendered visually,
-          auditorily, tactilely, or by any combination. As a result, information
-          rendered in electronic text can be presented in whatever form best
-          meets the needs of the user. It can also be easily enlarged, spoken
-          aloud so that it is easier for people with reading disabilities to
-          understand, or rendered in whatever tactile form best meets the needs
-          of a user.
-        </p>
-        <div class="guideline-section">
-          <h3>Who does this benefit?</h3>
-          <p>
-            This success criterion helps people who have difficulty perceiving
-            visual content. Assistive technology can read text aloud, present it
-            visually, or convert it to braille.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <!-- Examples tab -->
-    <div class="tab-pane">
-      <div class="content-card">
-        <h2>Examples</h2>
-        <div class="examples-container">
-          <div class="example-card">
-            <h3>Example title here</h3>
-            <p>Example description here</p>
-            <pre class="code-block"><code>Example code here</code></pre>
-            <img [src]="" alt="Example illustration" />
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- How to Meet tab -->
-  <div>
-    <div class="content-card">
-      <h2>How to Meet 1.1.1</h2>
-      <ul class="checklist">
-        <li class="checklist-item">
-          <span class="checklist-icon">✓</span>
-          <span>Item here</span>
+  <!-- Description -->
+  <section class="content-card">
+    <p class="guideline-description">
+      This success criterion aims to make non-text content accessible through
+      the use of a text alternative. Text alternatives are a primary way for
+      making information accessible because they can be understood multiple ways
+      (for example, visual, auditory or tactile) to match the needs of the user.
+      Providing text alternatives allows the information to be rendered in a
+      variety of ways by a variety of tools. For example, people who cannot see
+      a picture can have the text alternative read aloud using a screen reader.
+      People who cannot hear an audio file can have the text alternative
+      displayed so that they can read it. In the future, text alternatives will
+      also allow information to be more easily translated into sign language or
+      into a simpler form of the same language.
+    </p>
+    <div class="guideline-section">
+      <h3>Who does this benefit?</h3>
+      <ul>
+        <li>People who have difficulty perceiving visual content</li>
+        <li>
+          People who are deaf, hard of hearing or who are having trouble
+          understanding audio information for any reason
+        </li>
+        <li>
+          People who have difficulty understanding the meaning of photographs,
+          drawings and other images
         </li>
       </ul>
     </div>
-  </div>
+  </section>
 
-  <div class="content-card related-guidelines">
-    <h2>How to something something</h2>
-  </div>
-</div>
+  <!-- Example -->
+  <section class="content-card">
+    <h2>Examples</h2>
+
+    <div class="examples-container">
+      <div class="example-card-1">
+        <h3>The image indicating wether the print job has color or not</h3>
+        <img src="/images/1.1.1/111-example.png" alt="Color example" />
+        <p>
+          Code example:
+          <br />
+          &lt;img src="img/bw-icon.png" alt="Print job is Black &amp; White">
+        </p>
+      </div>
+
+      <div class="example-card-2">
+        <h3>Icons indicating actions or status</h3>
+        <img src="/images/1.1.1/111-example-2.png" alt="Icon example 1" />
+        <img src="/images/1.1.1/111-example-3.png" alt="Icon example 2" />
+        <img src="/images/1.1.1/111-example-4.png" alt="Icon example 3" />
+        <img src="/images/1.1.1/111-example-5.png" alt="Icon example 4" />
+        <p>
+          Code examples:
+          <br />
+          <br />
+          &lt;button aria-label="Edit staff member location access"
+          none;"&gt;&lt;/button&gt;
+          <br />
+          <br />
+          &lt;button aria-label="Delete user"&gt;&lt;/button&gt;
+          <br />
+          <br />
+          &lt;div aria-label="Status icon"&gt;&lt;/div&gt;
+          <br />
+          <br />
+          &lt;span aria-label="Checkmark icon"&gt;&lt;/span&gt;
+        </p>
+      </div>
+    </div>
+  </section>
+</main>
