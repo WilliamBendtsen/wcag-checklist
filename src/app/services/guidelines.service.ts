@@ -14,6 +14,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['dashboard', 'history', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.3.1',
@@ -23,6 +24,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.3.2',
@@ -32,6 +34,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.3.3',
@@ -41,6 +44,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.3.4',
@@ -50,6 +54,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.3.5',
@@ -59,6 +64,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.1',
@@ -68,6 +74,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.3',
@@ -77,6 +84,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.4',
@@ -86,6 +94,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.5',
@@ -95,6 +104,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.10',
@@ -104,6 +114,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.11',
@@ -113,6 +124,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.12',
@@ -122,6 +134,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '1.4.13',
@@ -131,6 +144,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.1.1',
@@ -140,6 +154,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.1.2',
@@ -149,6 +164,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.1.4',
@@ -158,6 +174,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.2.1',
@@ -167,6 +184,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.2.2',
@@ -176,6 +194,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.3.1',
@@ -185,6 +204,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.1',
@@ -194,6 +214,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.2',
@@ -202,6 +223,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.3',
@@ -211,6 +233,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.4',
@@ -220,6 +243,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.5',
@@ -229,6 +253,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.6',
@@ -237,6 +262,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.7',
@@ -246,6 +272,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.4.11',
@@ -255,6 +282,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.1',
@@ -264,6 +292,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.2',
@@ -273,6 +302,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.3',
@@ -282,6 +312,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.4',
@@ -291,6 +322,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.7',
@@ -300,6 +332,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '2.5.8',
@@ -309,6 +342,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.1.1',
@@ -318,6 +352,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.1.2',
@@ -327,6 +362,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.2.1',
@@ -336,6 +372,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.2.2',
@@ -345,6 +382,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.2.3',
@@ -354,6 +392,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.2.4',
@@ -363,6 +402,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.2.6',
@@ -372,6 +412,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.3.1',
@@ -381,6 +422,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.3.2',
@@ -390,6 +432,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.3.3',
@@ -399,6 +442,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.3.7',
@@ -408,6 +452,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '3.3.8',
@@ -417,6 +462,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '4.1.2',
@@ -426,6 +472,7 @@ export class GuidelinesService {
       level: 'A',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
     {
       id: '4.1.3',
@@ -435,6 +482,7 @@ export class GuidelinesService {
       level: 'AA',
       applicableTo: ['', '', ''],
       imageUrl: '',
+      fulfilled: false,
     },
   ].map((g) => ({
     ...g,

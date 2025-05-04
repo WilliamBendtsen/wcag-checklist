@@ -6,4 +6,5 @@ export interface Guideline {
   applicableTo: string[]; // routes where this guideline is specially relevant
   imageUrl?: string;
   category?: 'Perceivable' | 'Operable' | 'Understandable' | 'Robust';
+  fulfilled: boolean;
 }

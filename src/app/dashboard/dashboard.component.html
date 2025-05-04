@@ -1,5 +1,5 @@
 <h2>WCAG 2.2 Guidelines for "Dashboard"</h2>
-<div *ngIf="groupedGuidelines.length > 0; else noGuidelines">
+<div *ngIf="groupedGuidelines.length > 0">
   <div *ngFor="let group of groupedGuidelines" class="guideline-group">
     <h2 class="group-header">{{ group.category }}</h2>
 
@@ -8,17 +8,27 @@
       class="guideline-item"
       [routerLink]="['/guidelines', guideline.id]"
     >
-      <div>
-        <h3>
-          {{ guideline.id }} - {{ guideline.title }}
-          <span class="level">Level {{ guideline.level }}</span>
-        </h3>
-        <p>{{ guideline.description }}</p>
+      <div class="guideline-content" (click)="$event.stopPropagation()">
+        <div>
+          <h3>
+            {{ guideline.id }} - {{ guideline.title }}
+            <span class="level">Level {{ guideline.level }}</span>
+          </h3>
+          <p>{{ guideline.description }}</p>
+        </div>
+        <div class="checkbox-container">
+          <input
+            type="checkbox"
+            [checked]="guideline.fulfilled"
+            (change)="onFulfilledChange(guideline, $event)"
+            title="Mark as fulfilled"
+          />
+        </div>
       </div>
     </div>
   </div>
-</div>
 
-<ng-template #noGuidelines>
-  <p>No guidelines available for this page.</p>
-</ng-template>
+  <ng-template #noGuidelines>
+    <p>No guidelines available for this page.</p>
+  </ng-template>
+</div>
