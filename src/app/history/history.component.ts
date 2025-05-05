@@ -46,4 +46,8 @@ export class HistoryComponent implements OnInit {
       })
     );
   }
+
+  onFulfilledChange(guideline: any, event: Event) {
+    guideline.fulfilled = (event.target as HTMLInputElement).checked;
+  }
 }

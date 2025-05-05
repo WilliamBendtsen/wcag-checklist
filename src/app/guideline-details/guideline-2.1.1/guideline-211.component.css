@@ -1,0 +1,99 @@
+.guideline-detail {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 24px 16px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header styles */
+.guideline-header {
+  margin-bottom: 24px;
+}
+
+.guideline-title-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 16px;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.guideline-title {
+  font-size: 32px;
+  font-weight: 700;
+  margin: 0;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+/* Content cards */
+.content-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.guideline-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--color-text-primary);
+}
+
+.guideline-section {
+  margin-bottom: 24px;
+}
+
+.guideline-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.guideline-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Examples */
+.examples-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+.example-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--color-background-light);
+}
+
+.example-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+video {
+  width: 100%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

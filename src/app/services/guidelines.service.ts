@@ -12,7 +12,7 @@ export class GuidelinesService {
       description:
         'All non-text content that is presented to the user has a text alternative that serves the equivalent purpose.',
       level: 'A',
-      applicableTo: ['dashboard', 'history', ''],
+      applicableTo: ['dashboard', '', ''],
       imageUrl: '',
       fulfilled: false,
     },
@@ -152,7 +152,7 @@ export class GuidelinesService {
       description:
         'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the users movement, and not just the endpoints',
       level: 'A',
-      applicableTo: ['', '', ''],
+      applicableTo: ['history', '', ''],
       imageUrl: '',
       fulfilled: false,
     },

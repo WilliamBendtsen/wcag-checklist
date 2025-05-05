@@ -8,7 +8,7 @@
       class="guideline-item"
       [routerLink]="['/guidelines', guideline.id]"
     >
-      <div class="guideline-content" (click)="$event.stopPropagation()">
+      <div class="guideline-content">
         <div>
           <h3>
             {{ guideline.id }} - {{ guideline.title }}
@@ -21,14 +21,11 @@
             type="checkbox"
             [checked]="guideline.fulfilled"
             (change)="onFulfilledChange(guideline, $event)"
+            (click)="$event.stopPropagation()"
             title="Mark as fulfilled"
           />
         </div>
       </div>
     </div>
   </div>
-
-  <ng-template #noGuidelines>
-    <p>No guidelines available for this page.</p>
-  </ng-template>
 </div>
