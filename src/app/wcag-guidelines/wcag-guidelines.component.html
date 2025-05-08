@@ -1,22 +1,30 @@
 <h1>WCAG Guidelines For 'admp'</h1>
-<div *ngIf="groupedGuidelines.length > 0; else noGuidelines">
+<div *ngIf="groupedGuidelines.length > 0">
   <div *ngFor="let group of groupedGuidelines" class="guideline-group">
-    <h2 class="group-header">{{ group.category }}</h2>
+    <h2 class="group-header" (click)="toggleGroup(group.category)">
+      {{ group.category }}
+      <i
+        class="bi"
+        [ngClass]="
+          collapsedGroups[group.category]
+            ? 'bi-chevron-right'
+            : 'bi-chevron-down'
+        "
+      ></i>
+    </h2>
 
-    <div
-      *ngFor="let guideline of group.items"
-      class="guideline-item"
-      [routerLink]="['/guidelines', guideline.id]"
-    >
-      <h3>
-        {{ guideline.id }} - {{ guideline.title }}
-        <span class="level">Level {{ guideline.level }}</span>
-      </h3>
-      <p>{{ guideline.description }}</p>
+    <div *ngIf="!collapsedGroups[group.category]" class="guideline-items">
+      <div
+        *ngFor="let guideline of group.items"
+        class="guideline-item"
+        [routerLink]="['/guidelines', guideline.id]"
+      >
+        <h3>
+          {{ guideline.id }} - {{ guideline.title }}
+          <span class="level">Level {{ guideline.level }}</span>
+        </h3>
+        <p>{{ guideline.description }}</p>
+      </div>
     </div>
   </div>
 </div>
-
-<ng-template #noGuidelines>
-  <p>No guidelines available.</p>
-</ng-template>

@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 interface GuidelineGroup {
   category: string;
@@ -11,12 +11,13 @@ interface GuidelineGroup {
 
 @Component({
   selector: 'app-dashboard',
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf, RouterLink, NgClass],
   templateUrl: './dashboard.component.html',
   styleUrl: './dashboard.component.css',
 })
 export class DashboardComponent implements OnInit {
   groupedGuidelines: GuidelineGroup[] = [];
+  collapsedGroups: { [category: string]: boolean } = {};
   pageName = 'dashboard';
 
   constructor(
@@ -45,6 +46,15 @@ export class DashboardComponent implements OnInit {
         items,
       })
     );
+
+    // Initialize all as expanded
+    this.groupedGuidelines.forEach((group) => {
+      this.collapsedGroups[group.category] = false;
+    });
+  }
+
+  toggleGroup(category: string): void {
+    this.collapsedGroups[category] = !this.collapsedGroups[category];
   }
 
   onFulfilledChange(guideline: any, event: Event) {

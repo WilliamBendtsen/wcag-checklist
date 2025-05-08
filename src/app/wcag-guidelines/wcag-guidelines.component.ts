@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { RouterLink } from '@angular/router';
 
 interface GuidelineGroup {
@@ -12,12 +12,13 @@ interface GuidelineGroup {
 @Component({
   selector: 'app-wcag-guidelines',
   standalone: true,
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf, RouterLink, NgClass],
   templateUrl: './wcag-guidelines.component.html',
   styleUrls: ['./wcag-guidelines.component.css'],
 })
 export class WcagGuidelinesComponent implements OnInit {
   groupedGuidelines: GuidelineGroup[] = [];
+  collapsedGroups: { [category: string]: boolean } = {};
 
   constructor(private guidelinesService: GuidelinesService) {}
 
@@ -39,5 +40,14 @@ export class WcagGuidelinesComponent implements OnInit {
         items,
       })
     );
+
+    // Initialize all as expanded
+    this.groupedGuidelines.forEach((group) => {
+      this.collapsedGroups[group.category] = true;
+    });
+  }
+
+  toggleGroup(category: string): void {
+    this.collapsedGroups[category] = !this.collapsedGroups[category];
   }
 }

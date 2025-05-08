@@ -82,7 +82,7 @@ export class GuidelinesService {
       description:
         'The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, with a few exceptions*',
       level: 'AA',
-      applicableTo: ['', '', ''],
+      applicableTo: ['dashboard', '', ''],
       imageUrl: '',
       fulfilled: false,
     },
@@ -152,7 +152,7 @@ export class GuidelinesService {
       description:
         'All functionality of the content is operable through a keyboard interface without requiring specific timings for individual keystrokes, except where the underlying function requires input that depends on the path of the users movement, and not just the endpoints',
       level: 'A',
-      applicableTo: ['history', '', ''],
+      applicableTo: ['history', 'dashboard', ''],
       imageUrl: '',
       fulfilled: false,
     },

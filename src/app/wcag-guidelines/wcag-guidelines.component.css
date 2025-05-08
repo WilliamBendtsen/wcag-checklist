@@ -7,7 +7,9 @@
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
 }
 
-h2 {
+.group-header {
+  display: flex;
+  justify-content: space-between;
   color: #2563eb;
   margin-bottom: 24px;
   font-size: 28px;
