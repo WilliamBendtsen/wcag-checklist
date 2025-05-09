@@ -41,7 +41,6 @@ export class WcagGuidelinesComponent implements OnInit {
       })
     );
 
-    // Initialize all as expanded
     this.groupedGuidelines.forEach((group) => {
       this.collapsedGroups[group.category] = true;
     });

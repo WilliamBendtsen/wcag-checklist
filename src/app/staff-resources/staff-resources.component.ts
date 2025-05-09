@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GuidelinesService } from '../services/guidelines.service';
 import { Guideline } from '../models/guideline.model';
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 
 interface GuidelineGroup {
   category: string;
@@ -11,12 +11,13 @@ interface GuidelineGroup {
 
 @Component({
   selector: 'app-staff-resources',
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf, RouterLink, NgClass],
   templateUrl: './staff-resources.component.html',
   styleUrl: './staff-resources.component.css',
 })
 export class StaffResourcesComponent implements OnInit {
   groupedGuidelines: GuidelineGroup[] = [];
+  collapsedGroups: { [category: string]: boolean } = {};
   pageName = 'staff-resources';
 
   constructor(
@@ -45,5 +46,17 @@ export class StaffResourcesComponent implements OnInit {
         items,
       })
     );
+
+    this.groupedGuidelines.forEach((group) => {
+      this.collapsedGroups[group.category] = false;
+    });
+  }
+
+  toggleGroup(category: string): void {
+    this.collapsedGroups[category] = !this.collapsedGroups[category];
+  }
+
+  onFulfilledChange(guideline: any, event: Event) {
+    guideline.fulfilled = (event.target as HTMLInputElement).checked;
   }
 }

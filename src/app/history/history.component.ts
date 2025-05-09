@@ -1,4 +1,4 @@
-import { NgFor, NgIf } from '@angular/common';
+import { NgClass, NgFor, NgIf } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 import { GuidelinesService } from '../services/guidelines.service';
@@ -11,12 +11,13 @@ interface GuidelineGroup {
 
 @Component({
   selector: 'app-history',
-  imports: [NgFor, NgIf, RouterLink],
+  imports: [NgFor, NgIf, RouterLink, NgClass],
   templateUrl: './history.component.html',
   styleUrl: './history.component.css',
 })
 export class HistoryComponent implements OnInit {
   groupedGuidelines: GuidelineGroup[] = [];
+  collapsedGroups: { [category: string]: boolean } = {};
   pageName = 'history';
 
   constructor(
@@ -45,6 +46,14 @@ export class HistoryComponent implements OnInit {
         items,
       })
     );
+
+    this.groupedGuidelines.forEach((group) => {
+      this.collapsedGroups[group.category] = false;
+    });
+  }
+
+  toggleGroup(category: string): void {
+    this.collapsedGroups[category] = !this.collapsedGroups[category];
   }
 
   onFulfilledChange(guideline: any, event: Event) {

@@ -47,7 +47,6 @@ export class DashboardComponent implements OnInit {
       })
     );
 
-    // Initialize all as expanded
     this.groupedGuidelines.forEach((group) => {
       this.collapsedGroups[group.category] = false;
     });
