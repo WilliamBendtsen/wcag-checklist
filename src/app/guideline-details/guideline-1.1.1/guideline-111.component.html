@@ -2,7 +2,15 @@
   <!-- Header section -->
   <section class="guideline-header">
     <div class="guideline-title-container">
-      <h1 class="guideline-title">1.1.1 - Non-text content</h1>
+      <h1 class="guideline-title">
+        1.1.1 - Non-text content
+        <input
+          type="checkbox"
+          [checked]="fulfilled"
+          (change)="onFulfilledChange($event)"
+          title="Mark as fulfilled"
+        />
+      </h1>
     </div>
   </section>
 

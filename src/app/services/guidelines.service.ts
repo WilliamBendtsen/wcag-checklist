@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Guideline } from '../models/guideline.model';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', // This tells Angular to provide this service globally
+  providedIn: 'root',
 })
 export class GuidelinesService {
   private guidelines: Guideline[] = [
@@ -544,12 +545,30 @@ export class GuidelinesService {
     category: this.getCategoryById(g.id),
   }));
 
+  private guidelineFulfilledState = new BehaviorSubject<{ [key: string]: boolean }>({});
+
   getAllGuidelines(): Guideline[] {
     return this.guidelines;
   }
 
   getGuidelinesForPage(page: string): Guideline[] {
     return this.guidelines.filter((g) => g.applicableTo.includes(page));
+  }
+
+  getGuidelineById(id: string): Guideline | undefined {
+    return this.guidelines.find(g => g.id === id);
+  }
+
+  getFulfilledState(guidelineId: string): Observable<boolean> {
+    return new BehaviorSubject(this.guidelineFulfilledState.value[guidelineId] || false);
+  }
+
+  setFulfilledState(guidelineId: string, fulfilled: boolean) {
+    const currentState = this.guidelineFulfilledState.value;
+    this.guidelineFulfilledState.next({
+      ...currentState,
+      [guidelineId]: fulfilled
+    });
   }
 
   private getCategoryById(
