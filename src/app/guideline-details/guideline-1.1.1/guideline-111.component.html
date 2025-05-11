@@ -1,11 +1,12 @@
 <div class="guideline-container">
   <!-- Sidebar -->
   <aside class="sidebar">
-    <h3>Dashboard Guidelines</h3>
+    <h3>{{ pageTitle }} Guidelines</h3>
     <ul class="sidebar-nav">
-      <li *ngFor="let guideline of dashboardGuidelines">
+      <li *ngFor="let guideline of guidelines">
         <a 
           [routerLink]="['/guidelines', guideline.id]"
+          [queryParams]="{from: sourcePage}"
           [class.active]="guideline.id === '1.1.1'"
         >
           {{ guideline.id }} - {{ guideline.title }}

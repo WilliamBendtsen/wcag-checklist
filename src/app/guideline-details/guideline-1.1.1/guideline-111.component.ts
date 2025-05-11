@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { GuidelinesService } from '../../services/guidelines.service';
 import { Guideline } from '../../models/guideline.model';
 import { NgFor, NgIf } from '@angular/common';
-import { RouterLink } from '@angular/router';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-guideline-111',
@@ -12,17 +12,28 @@ import { RouterLink } from '@angular/router';
 })
 export class Guideline111Component implements OnInit {
   fulfilled = false;
-  dashboardGuidelines: Guideline[] = [];
+  guidelines: Guideline[] = [];
+  sourcePage: string = '';
+  pageTitle: string = '';
 
-  constructor(private guidelinesService: GuidelinesService) {}
+  constructor(
+    private guidelinesService: GuidelinesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.guidelinesService
       .getFulfilledState('1.1.1')
       .subscribe((state) => (this.fulfilled = state));
     
-    // Get all guidelines for the dashboard page
-    this.dashboardGuidelines = this.guidelinesService.getGuidelinesForPage('dashboard');
+    // Get the source page from the query params
+    this.route.queryParams.subscribe(params => {
+      this.sourcePage = params['from'] || 'dashboard';
+      this.pageTitle = this.sourcePage.split('-').map(word => 
+        word.charAt(0).toUpperCase() + word.slice(1)
+      ).join(' ');
+      this.guidelines = this.guidelinesService.getGuidelinesForPage(this.sourcePage);
+    });
   }
 
   onFulfilledChange(event: Event) {
