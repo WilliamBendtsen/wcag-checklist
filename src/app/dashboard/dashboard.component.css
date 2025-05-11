@@ -73,4 +73,5 @@ input[type="checkbox"] {
 
 .guideline-item.greyed-out {
   opacity: 0.5;
+  background-color: #e5e7eb;
 }
