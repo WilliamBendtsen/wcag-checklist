@@ -12,9 +12,14 @@ import { RouterLink } from '@angular/router';
 })
 export class Guideline111Component implements OnInit {
   fulfilled = false;
-  dashboardGuidelines: Guideline[] = [];
+  guidelines: Guideline[] = [];
+  sourcePage: string = '';
+  pageTitle: string = '';
 
-  constructor(private guidelinesService: GuidelinesService) {}
+  constructor(
+    private guidelinesService: GuidelinesService,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit() {
     this.guidelinesService
