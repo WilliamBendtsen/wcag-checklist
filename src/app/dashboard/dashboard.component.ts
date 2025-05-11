@@ -38,6 +38,11 @@ export class DashboardComponent implements OnInit {
         grouped[g.category] = [];
       }
       grouped[g.category].push(g);
+
+      // Subscribe to fulfilled state for each guideline
+      this.guidelinesService
+        .getFulfilledState(g.id)
+        .subscribe((state) => (g.fulfilled = state));
     }
 
     this.groupedGuidelines = Object.entries(grouped).map(
@@ -56,7 +61,11 @@ export class DashboardComponent implements OnInit {
     this.collapsedGroups[category] = !this.collapsedGroups[category];
   }
 
-  onFulfilledChange(guideline: any, event: Event) {
-    guideline.fulfilled = (event.target as HTMLInputElement).checked;
+  onFulfilledChange(guideline: Guideline, event: Event) {
+    const checked = (event.target as HTMLInputElement).checked;
+    // Update the local guideline object immediately
+    guideline.fulfilled = checked;
+    // Then update the service state
+    this.guidelinesService.setFulfilledState(guideline.id, checked);
   }
 }

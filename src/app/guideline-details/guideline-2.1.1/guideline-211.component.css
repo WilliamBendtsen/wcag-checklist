@@ -7,23 +7,25 @@
 
 /* Header styles */
 .guideline-header {
-  margin-bottom: 24px;
-}
-
-.guideline-title-container {
+  margin-bottom: 1rem;
   display: flex;
-  align-items: center;
-  margin-bottom: 16px;
-  flex-wrap: wrap;
-  gap: 12px;
+  justify-content: space-between;
 }
 
 .guideline-title {
-  font-size: 32px;
+  font-size: 2rem;
   font-weight: 700;
-  margin: 0;
-  color: var(--color-text-primary);
-  line-height: 1.2;
+  color: black;
+}
+
+.guideline-header label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.guideline-header input {
+  transform: scale(2);
 }
 
 /* Content cards */
@@ -67,14 +69,16 @@
   gap: 24px;
 }
 
-.example-card {
+.example-card-1,
+.example-card-2 {
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 16px;
   background-color: var(--color-background-light);
 }
 
-.example-card h3 {
+.example-card-1 h3,
+.example-card-2 h3 {
   font-size: 18px;
   font-weight: 600;
   margin-top: 0;
@@ -82,11 +86,7 @@
   color: var(--color-text-primary);
 }
 
-video {
-  width: 100%;
-}
-
-/* Animations */
+/* Fade in animation when clicking on card */
 @keyframes fadeIn {
   from {
     opacity: 0;

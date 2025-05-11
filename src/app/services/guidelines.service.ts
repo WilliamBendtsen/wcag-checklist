@@ -1,8 +1,9 @@
 import { Injectable } from '@angular/core';
 import { Guideline } from '../models/guideline.model';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
-  providedIn: 'root', // This tells Angular to provide this service globally
+  providedIn: 'root',
 })
 export class GuidelinesService {
   private guidelines: Guideline[] = [
@@ -544,12 +545,56 @@ export class GuidelinesService {
     category: this.getCategoryById(g.id),
   }));
 
+  private guidelineFulfilledState = new BehaviorSubject<{
+    [key: string]: boolean;
+  }>({});
+
+  constructor() {
+    // Initialize the BehaviorSubject with any saved state (could be from localStorage)
+    const savedState = this.getSavedState();
+    if (savedState) {
+      this.guidelineFulfilledState.next(savedState);
+
+      // Update the initial state of the guidelines array
+      this.guidelines.forEach((guideline) => {
+        guideline.fulfilled = !!savedState[guideline.id];
+      });
+    }
+  }
+
   getAllGuidelines(): Guideline[] {
     return this.guidelines;
   }
 
   getGuidelinesForPage(page: string): Guideline[] {
     return this.guidelines.filter((g) => g.applicableTo.includes(page));
+  }
+
+  getGuidelineById(id: string): Guideline | undefined {
+    return this.guidelines.find((g) => g.id === id);
+  }
+
+  getFulfilledState(guidelineId: string): Observable<boolean> {
+    return new BehaviorSubject(
+      this.guidelineFulfilledState.value[guidelineId] || false
+    );
+  }
+
+  setFulfilledState(guidelineId: string, fulfilled: boolean) {
+    const currentState = this.guidelineFulfilledState.value;
+    const newState = {
+      ...currentState,
+      [guidelineId]: fulfilled,
+    };
+
+    this.guidelineFulfilledState.next(newState);
+    this.saveState(newState);
+
+    // Also update the guideline in the guidelines array
+    const guideline = this.getGuidelineById(guidelineId);
+    if (guideline) {
+      guideline.fulfilled = fulfilled;
+    }
   }
 
   private getCategoryById(
@@ -568,5 +613,15 @@ export class GuidelinesService {
       default:
         throw new Error(`Unknown guideline id prefix: ${id}`);
     }
+  }
+
+  // Optional: Save state to localStorage for persistence
+  private saveState(state: { [key: string]: boolean }) {
+    localStorage.setItem('guidelineFulfilledState', JSON.stringify(state));
+  }
+
+  private getSavedState(): { [key: string]: boolean } | null {
+    const saved = localStorage.getItem('guidelineFulfilledState');
+    return saved ? JSON.parse(saved) : null;
   }
 }

@@ -1,9 +1,16 @@
 <main class="guideline-detail">
   <!-- Header section -->
   <section class="guideline-header">
-    <div class="guideline-title-container">
-      <h1 class="guideline-title">2.4.3 - Focus Order</h1>
-    </div>
+    <h1 class="guideline-title">2.4.3 - Focus Order</h1>
+    <label>
+      Mark as Fulfilled
+      <input
+        type="checkbox"
+        [checked]="fulfilled"
+        (change)="onFulfilledChange($event)"
+        title="Mark as fulfilled"
+      />
+    </label>
   </section>
 
   <!-- Description -->
