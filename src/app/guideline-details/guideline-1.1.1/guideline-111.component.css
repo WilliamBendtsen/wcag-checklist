@@ -16,6 +16,15 @@
   font-size: 2rem;
   font-weight: 700;
   color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guideline-title a {
+  font-size: 1rem;
+  font-weight: lighter;
 }
 
 .guideline-header label {
@@ -64,8 +73,8 @@
 
 /* Examples */
 .examples-container {
-  display: grid;
-  grid-template-columns: 1fr;
+  display: flex;
+  justify-content: center;
   gap: 24px;
 }
 
