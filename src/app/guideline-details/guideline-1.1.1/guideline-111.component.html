@@ -3,7 +3,7 @@
   <aside class="sidebar">
     <h3>{{ pageTitle }} Guidelines</h3>
     <ul class="sidebar-nav">
-      <li *ngFor="let guideline of dashboardGuidelines">
+      <li *ngFor="let guideline of guidelines">
         <a
           [routerLink]="['/guidelines', guideline.id]"
           [queryParams]="{ from: sourcePage }"
