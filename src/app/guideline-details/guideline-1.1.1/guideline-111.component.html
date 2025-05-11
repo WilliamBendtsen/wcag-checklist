@@ -4,7 +4,7 @@
     <h3>Dashboard Guidelines</h3>
     <ul class="sidebar-nav">
       <li *ngFor="let guideline of dashboardGuidelines">
-        <a 
+        <a
           [routerLink]="['/guidelines', guideline.id]"
           [class.active]="guideline.id === '1.1.1'"
         >
