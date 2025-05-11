@@ -1,94 +1,112 @@
-<main class="guideline-detail">
-  <!-- Header section -->
-  <section class="guideline-header">
-    <h1 class="guideline-title">
-      1.1.1 - Non-text content
+<div class="guideline-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>Dashboard Guidelines</h3>
+    <ul class="sidebar-nav">
+      <li *ngFor="let guideline of dashboardGuidelines">
+        <a 
+          [routerLink]="['/guidelines', guideline.id]"
+          [class.active]="guideline.id === '1.1.1'"
+        >
+          {{ guideline.id }} - {{ guideline.title }}
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="guideline-detail">
+    <!-- Header section -->
+    <section class="guideline-header">
+      <h1 class="guideline-title">
+        1.1.1 - Non-text content
+        <a
+          href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
+          >Official 1.1.1 WCAG Docs
+        </a>
+      </h1>
+      <label>
+        Mark as Fulfilled
+        <input
+          type="checkbox"
+          [checked]="fulfilled"
+          (change)="onFulfilledChange($event)"
+          title="Mark as fulfilled"
+        />
+      </label>
+    </section>
+
+    <!-- Description -->
+    <section class="content-card">
+      <p class="guideline-description">
+        This success criterion aims to make non-text content accessible through
+        the use of a text alternative
+      </p>
+      <div class="guideline-section">
+        <h3>Who does this benefit?</h3>
+        <ul>
+          <li>People who have difficulty perceiving visual content</li>
+          <li>
+            People who are deaf, hard of hearing or who are having trouble
+            understanding audio information for any reason
+          </li>
+          <li>
+            People who have difficulty understanding the meaning of photographs,
+            drawings and other images
+          </li>
+        </ul>
+        <h3>How to meet this criterion</h3>
+        <ul>
+          <li>Make sure all images have alt-text</li>
+          <li>Make sure all objects have aria-labels</li>
+        </ul>
+      </div>
       <a
-        href="https://www.w3.org/WAI/WCAG22/Understanding/non-text-content.html"
-        >Official 1.1.1 WCAG Docs
-      </a>
-    </h1>
-    <label>
-      Mark as Fulfilled
-      <input
-        type="checkbox"
-        [checked]="fulfilled"
-        (change)="onFulfilledChange($event)"
-        title="Mark as fulfilled"
-      />
-    </label>
-  </section>
+        target="_blank"
+        href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111#non-text-content"
+        >More details on how to meet this criterion</a
+      >
+    </section>
 
-  <!-- Description -->
-  <section class="content-card">
-    <p class="guideline-description">
-      This success criterion aims to make non-text content accessible through
-      the use of a text alternative
-    </p>
-    <div class="guideline-section">
-      <h3>Who does this benefit?</h3>
-      <ul>
-        <li>People who have difficulty perceiving visual content</li>
-        <li>
-          People who are deaf, hard of hearing or who are having trouble
-          understanding audio information for any reason
-        </li>
-        <li>
-          People who have difficulty understanding the meaning of photographs,
-          drawings and other images
-        </li>
-      </ul>
-      <h3>How to meet this criterion</h3>
-      <ul>
-        <li>Make sure all images have alt-text</li>
-        <li>Make sure all objects have aria-labels</li>
-      </ul>
-    </div>
-    <a
-      target="_blank"
-      href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111#non-text-content"
-      >More details on how to meet this criterion</a
-    >
-  </section>
+    <!-- Example -->
+    <section class="content-card">
+      <h2>Examples</h2>
 
-  <!-- Example -->
-  <section class="content-card">
-    <h2>Examples</h2>
+      <div class="examples-container">
+        <div class="example-card-1">
+          <h3>The image indicating wether the print job has color or not</h3>
+          <img src="/images/1.1.1/111-example.png" alt="Color example" />
+          <p>
+            Code example:
+            <br />
+            &lt;img src="img/bw-icon.png" alt="Print job is Black &amp; White">
+          </p>
+        </div>
 
-    <div class="examples-container">
-      <div class="example-card-1">
-        <h3>The image indicating wether the print job has color or not</h3>
-        <img src="/images/1.1.1/111-example.png" alt="Color example" />
-        <p>
-          Code example:
-          <br />
-          &lt;img src="img/bw-icon.png" alt="Print job is Black &amp; White">
-        </p>
+        <div class="example-card-2">
+          <h3>Icons indicating actions or status</h3>
+          <img src="/images/1.1.1/111-example-2.png" alt="Icon example 1" />
+          <img src="/images/1.1.1/111-example-3.png" alt="Icon example 2" />
+          <img src="/images/1.1.1/111-example-4.png" alt="Icon example 3" />
+          <img src="/images/1.1.1/111-example-5.png" alt="Icon example 4" />
+          <p>
+            Code examples:
+            <br />
+            <br />
+            &lt;button aria-label="Edit staff member location access"
+            none;"&gt;&lt;/button&gt;
+            <br />
+            <br />
+            &lt;button aria-label="Delete user"&gt;&lt;/button&gt;
+            <br />
+            <br />
+            &lt;div aria-label="Status icon"&gt;&lt;/div&gt;
+            <br />
+            <br />
+            &lt;span aria-label="Checkmark icon"&gt;&lt;/span&gt;
+          </p>
+        </div>
       </div>
-
-      <div class="example-card-2">
-        <h3>Icons indicating actions or status</h3>
-        <img src="/images/1.1.1/111-example-2.png" alt="Icon example 1" />
-        <img src="/images/1.1.1/111-example-3.png" alt="Icon example 2" />
-        <img src="/images/1.1.1/111-example-4.png" alt="Icon example 3" />
-        <img src="/images/1.1.1/111-example-5.png" alt="Icon example 4" />
-        <p>
-          Code examples:
-          <br />
-          <br />
-          &lt;button aria-label="Edit staff member location access"
-          none;"&gt;&lt;/button&gt;
-          <br />
-          <br />
-          &lt;button aria-label="Delete user"&gt;&lt;/button&gt;
-          <br />
-          <br />
-          &lt;div aria-label="Status icon"&gt;&lt;/div&gt;
-          <br />
-          <br />
-          &lt;span aria-label="Checkmark icon"&gt;&lt;/span&gt;
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</div>

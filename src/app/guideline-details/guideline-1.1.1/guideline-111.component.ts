@@ -1,14 +1,18 @@
 import { Component, OnInit } from '@angular/core';
 import { GuidelinesService } from '../../services/guidelines.service';
+import { Guideline } from '../../models/guideline.model';
+import { NgFor, NgIf } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-guideline-111',
-  imports: [],
+  imports: [NgFor, NgIf, RouterLink],
   templateUrl: './guideline-111.component.html',
   styleUrl: './guideline-111.component.css',
 })
 export class Guideline111Component implements OnInit {
   fulfilled = false;
+  dashboardGuidelines: Guideline[] = [];
 
   constructor(private guidelinesService: GuidelinesService) {}
 
@@ -16,6 +20,9 @@ export class Guideline111Component implements OnInit {
     this.guidelinesService
       .getFulfilledState('1.1.1')
       .subscribe((state) => (this.fulfilled = state));
+    
+    // Get all guidelines for the dashboard page
+    this.dashboardGuidelines = this.guidelinesService.getGuidelinesForPage('dashboard');
   }
 
   onFulfilledChange(event: Event) {
