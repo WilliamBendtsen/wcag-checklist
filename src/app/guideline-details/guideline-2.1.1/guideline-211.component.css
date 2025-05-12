@@ -125,27 +125,32 @@
 }
 
 /* Examples */
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
 .examples-container {
   display: flex;
   justify-content: center;
   gap: 24px;
 }
 
-.example-card-1,
-.example-card-2 {
+.example-card {
+  width: 100%;
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 16px;
   background-color: var(--color-background-light);
 }
 
-.example-card-1 h3,
-.example-card-2 h3 {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 0;
-  margin-bottom: 12px;
-  color: var(--color-text-primary);
+.example-card h3 {
+  font-size: 1.3rem;
+}
+
+.example-card video {
+  width: 100%;
 }
 
 /* Fade in animation when clicking on card */
