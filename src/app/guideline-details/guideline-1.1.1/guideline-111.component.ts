@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { GuidelinesService } from '../../services/guidelines.service';
 import { Guideline } from '../../models/guideline.model';
-import { NgFor, NgIf } from '@angular/common';
+import { NgFor } from '@angular/common';
 import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({

@@ -18,7 +18,7 @@
         *ngFor="let guideline of group.items"
         class="guideline-item"
         [routerLink]="['/guidelines', guideline.id]"
-        [queryParams]="{from: pageName}"
+        [queryParams]="{ from: pageName }"
         [class.greyed-out]="guideline.fulfilled"
       >
         <div class="guideline-content">

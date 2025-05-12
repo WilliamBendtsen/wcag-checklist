@@ -1,103 +1,128 @@
-<main class="guideline-detail">
-  <!-- Header section -->
-  <section class="guideline-header">
-    <h1 class="guideline-title">1.4.3 - Contrast (Minimum)</h1>
-    <label>
-      Mark as Fulfilled
-      <input
-        type="checkbox"
-        [checked]="fulfilled"
-        (change)="onFulfilledChange($event)"
-        title="Mark as fulfilled"
-      />
-    </label>
-  </section>
+<div class="guideline-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>{{ pageTitle }} Guidelines</h3>
+    <ul class="sidebar-nav">
+      <li *ngFor="let guideline of guidelines">
+        <a
+          [routerLink]="['/guidelines', guideline.id]"
+          [queryParams]="{ from: sourcePage }"
+          [class.active]="guideline.id === '1.4.3'"
+        >
+          {{ guideline.id }} - {{ guideline.title }}
+        </a>
+      </li>
+    </ul>
+  </aside>
 
-  <!-- Description -->
-  <section class="content-card">
-    <p class="guideline-description">
-      This success criterion aims to make it so the text in question can be seen
-      by more people
-    </p>
-    <div class="guideline-section">
-      <h3>Who does this benefit?</h3>
-      <ul>
-        <li>People with color vision deficiency</li>
-        <li>People with generally low vision</li>
-      </ul>
-      <h3>How to meet this criterion</h3>
-      <i
-        >(For text that is less than 18 point if not bold and less than 14 point
-        if bold)</i
-      >
-      <ul>
-        <li>
-          Ensuring that a contrast ratio of at least 4.5:1 exists between text
-          and background behind the text
-        </li>
-      </ul>
-      <i
-        >(For text that is at least 18 point if not bold and at least 14 point
-        if bold)</i
-      >
-      <ul>
-        <li>
-          Ensuring that a contrast ratio of at least 3:1 exists between text and
-          background behind the text
-        </li>
-      </ul>
-    </div>
-    <p>
-      Note: <br />
+  <!-- Main content -->
+  <main class="guideline-detail">
+    <!-- Header section -->
+    <section class="guideline-header">
+      <h1 class="guideline-title">
+        1.4.3 - Contrast (Minimum)
+        <a
+          href="https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html"
+          >Official 1.4.3 WCAG Docs</a
+        >
+      </h1>
+      <label>
+        Mark as Fulfilled
+        <input
+          type="checkbox"
+          [checked]="fulfilled"
+          (change)="onFulfilledChange($event)"
+          title="Mark as fulfilled"
+        />
+      </label>
+    </section>
+
+    <!-- Description -->
+    <section class="content-card">
+      <p class="guideline-description">
+        This success criterion aims to make it so the text in question can be
+        seen by more people
+      </p>
+      <div class="guideline-section">
+        <h3>Who does this benefit?</h3>
+        <ul>
+          <li>People with color vision deficiency</li>
+          <li>People with generally low vision</li>
+        </ul>
+        <h3>How to meet this criterion</h3>
+        <i
+          >(For text that is less than 18 point if not bold and less than 14
+          point if bold)</i
+        >
+        <ul>
+          <li>
+            Ensuring that a contrast ratio of at least 4.5:1 exists between text
+            and background behind the text
+          </li>
+        </ul>
+        <i
+          >(For text that is at least 18 point if not bold and at least 14 point
+          if bold)</i
+        >
+        <ul>
+          <li>
+            Ensuring that a contrast ratio of at least 3:1 exists between text
+            and background behind the text
+          </li>
+        </ul>
+      </div>
+      <p>
+        Note: <br />
+        <a
+          target="_blank"
+          href="https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf?hl=en"
+          >This browser extension</a
+        >
+        (Chrome + Firefox) can automatically detect if the contrast ratio of an
+        entire site meets this criterion
+      </p>
       <a
         target="_blank"
-        href="https://chromewebstore.google.com/detail/wcag-color-contrast-check/plnahcmalebffmaghcpcmpaciebdhgdf?hl=en"
-        >This browser extension</a
+        href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C143#contrast-minimum"
+        >More details on how to meet this criterion</a
       >
-      (Chrome + Firefox) can automatically detect if the contrast ratio of an
-      entire site meets this criterion
-    </p>
-    <a
-      target="_blank"
-      href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C143#contrast-minimum"
-      >More details on how to meet this criterion</a
-    >
-  </section>
+    </section>
 
-  <!-- Example -->
-  <section class="content-card">
-    <h2>Examples</h2>
+    <!-- Example -->
+    <section class="content-card">
+      <h2>Examples</h2>
 
-    <div class="examples-container">
-      <div class="example-card-1">
-        <h3>Example 1</h3>
-        <img src="" alt="example 1" />
-        <p>
-          Code example:
-          <br />
-          &lt;example>
-        </p>
+      <div class="examples-container">
+        <div class="example-card-1">
+          <h3>Example 1</h3>
+          <img src="" alt="example 1" />
+          <p>
+            Code example:
+            <br />
+            &lt;example>
+          </p>
+        </div>
+
+        <div class="example-card-2">
+          <h3>Example 2</h3>
+          <img src="" alt="Example 2" />
+          <p>
+            Code examples:
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+          </p>
+        </div>
       </div>
-
-      <div class="example-card-2">
-        <h3>Example 2</h3>
-        <img src="" alt="Example 2" />
-        <p>
-          Code examples:
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-        </p>
-      </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</div>

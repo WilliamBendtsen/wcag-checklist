@@ -1,84 +1,108 @@
-<main class="guideline-detail">
-  <!-- Header section -->
-  <section class="guideline-header">
-    <h1 class="guideline-title">4.1.2 - Name, Role, Value</h1>
-    <label>
-      Mark as Fulfilled
-      <input
-        type="checkbox"
-        [checked]="fulfilled"
-        (change)="onFulfilledChange($event)"
-        title="Mark as fulfilled"
-      />
-    </label>
-  </section>
+<div class="guideline-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>{{ pageTitle }} Guidelines</h3>
+    <ul class="sidebar-nav">
+      <li *ngFor="let guideline of guidelines">
+        <a
+          [routerLink]="['/guidelines', guideline.id]"
+          [queryParams]="{ from: sourcePage }"
+          [class.active]="guideline.id === '4.1.2'"
+        >
+          {{ guideline.id }} - {{ guideline.title }}
+        </a>
+      </li>
+    </ul>
+  </aside>
 
-  <!-- Description -->
-  <section class="content-card">
-    <p class="guideline-description">
-      This success criterion aims to help people using assisstive technology
-      understand all components
-    </p>
-    <div class="guideline-section">
-      <h3>Who does this benefit?</h3>
-      <ul>
-        <li>
-          People using assistive technology, such as screen readers, screen
-          magnifiers, and speech recognition software
-        </li>
-      </ul>
-      <h3>How to meet this criterion</h3>
-      <ul>
-        <li>
-          Using aria-label to provide an invisible label where a visible label
-          cannot be used
-        </li>
-        <li>
-          Using aria-labelledby to provide a name for user interface controls
-        </li>
-      </ul>
-    </div>
-    <a
-      target="_blank"
-      href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C143%2C211%2C243%2C331%2C412#name-role-value"
-      >More details on how to meet this criterion</a
-    >
-  </section>
+  <main class="guideline-detail">
+    <!-- Header section -->
+    <section class="guideline-header">
+      <h1 class="guideline-title">
+        4.1.2 - Name, Role, Value
+        <a
+          href="https://www.w3.org/WAI/WCAG22/Understanding/name-role-value.html"
+          >Official 4.1.2 WCAG Docs</a
+        >
+      </h1>
+      <label>
+        Mark as Fulfilled
+        <input
+          type="checkbox"
+          [checked]="fulfilled"
+          (change)="onFulfilledChange($event)"
+          title="Mark as fulfilled"
+        />
+      </label>
+    </section>
 
-  <!-- Example -->
-  <section class="content-card">
-    <h2>Examples</h2>
-
-    <div class="examples-container">
-      <div class="example-card-1">
-        <h3>Example 1</h3>
-        <img src="" alt="example 1" />
-        <p>
-          Code example:
-          <br />
-          &lt;example>
-        </p>
+    <!-- Description -->
+    <section class="content-card">
+      <p class="guideline-description">
+        This success criterion aims to help people using assisstive technology
+        understand all components
+      </p>
+      <div class="guideline-section">
+        <h3>Who does this benefit?</h3>
+        <ul>
+          <li>
+            People using assistive technology, such as screen readers, screen
+            magnifiers, and speech recognition software
+          </li>
+        </ul>
+        <h3>How to meet this criterion</h3>
+        <ul>
+          <li>
+            Using aria-label to provide an invisible label where a visible label
+            cannot be used
+          </li>
+          <li>
+            Using aria-labelledby to provide a name for user interface controls
+          </li>
+        </ul>
       </div>
+      <a
+        target="_blank"
+        href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=111%2C143%2C211%2C243%2C331%2C412#name-role-value"
+        >More details on how to meet this criterion</a
+      >
+    </section>
 
-      <div class="example-card-2">
-        <h3>Example 2</h3>
-        <img src="" alt="Example 2" />
-        <p>
-          Code examples:
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-          <br />
-          <br />
-          &lt;example>
-        </p>
+    <!-- Example -->
+    <section class="content-card">
+      <h2>Examples</h2>
+
+      <div class="examples-container">
+        <div class="example-card-1">
+          <h3>Example 1</h3>
+          <img src="" alt="example 1" />
+          <p>
+            Code example:
+            <br />
+            &lt;example>
+          </p>
+        </div>
+
+        <div class="example-card-2">
+          <h3>Example 2</h3>
+          <img src="" alt="Example 2" />
+          <p>
+            Code examples:
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+            <br />
+            <br />
+            &lt;example>
+          </p>
+        </div>
       </div>
-    </div>
-  </section>
-</main>
+    </section>
+  </main>
+</div>
