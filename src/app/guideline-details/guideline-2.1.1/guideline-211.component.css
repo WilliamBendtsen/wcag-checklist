@@ -133,8 +133,7 @@ h2 {
 
 .examples-container {
   display: flex;
-  justify-content: center;
-  gap: 24px;
+  justify-content: space-around;
 }
 
 .example-card {

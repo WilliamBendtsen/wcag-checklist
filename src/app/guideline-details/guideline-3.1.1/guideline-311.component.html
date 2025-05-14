@@ -1,1 +1,84 @@
-<p>guideline-311 works!</p>
+<div class="guideline-container">
+  <!-- Sidebar -->
+  <aside class="sidebar">
+    <h3>{{ pageTitle }} Guidelines</h3>
+    <ul class="sidebar-nav">
+      <li *ngFor="let guideline of guidelines">
+        <a
+          [routerLink]="['/guidelines', guideline.id]"
+          [queryParams]="{ from: sourcePage }"
+          [class.active]="guideline.id === '3.3.1'"
+        >
+          {{ guideline.id }} - {{ guideline.title }}
+        </a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Main content -->
+  <main class="guideline-detail">
+    <!-- Header section -->
+    <section class="guideline-header">
+      <h1 class="guideline-title">
+        3.1.1 - Language of Page
+        <a
+          target="_blank"
+          href="https://www.w3.org/WAI/WCAG22/Understanding/language-of-page.html"
+          >Official 3.1.1 WCAG Docs</a
+        >
+      </h1>
+      <label>
+        Mark as Fulfilled
+        <input
+          type="checkbox"
+          [checked]="fulfilled"
+          (change)="onFulfilledChange($event)"
+          title="Mark as fulfilled"
+        />
+      </label>
+    </section>
+
+    <!-- Description -->
+    <section class="content-card">
+      <p class="guideline-description">
+        This success criterion aims to make it so assistive technology can
+        determine the language of a page
+      </p>
+      <div class="guideline-section">
+        <h3>Who does this benefit?</h3>
+        <ul>
+          <li>
+            People who use screen readers or other technologies that convert
+            text into synthetic speech
+          </li>
+          <li>
+            People who find it difficult to read written material with fluency
+            and accuracy, such as recognizing characters and alphabets or
+            decoding words
+          </li>
+        </ul>
+        <h3>How to meet this criterion</h3>
+        <ul>
+          <li>Using the language attribute on the HTML element</li>
+        </ul>
+      </div>
+      <a
+        target="_blank"
+        href="https://www.w3.org/WAI/WCAG22/quickref/?showtechniques=311#language-of-page"
+        >More details on how to meet this criterion</a
+      >
+    </section>
+
+    <!-- Example -->
+    <section class="content-card">
+      <h2>Examples</h2>
+
+      <div class="examples-container">
+        <div class="example-card">
+          <h3>The 'lang' attribute in the index.html file</h3>
+          <img src="images/3.1.1/311-example.png" alt="example 1" />
+        </div>
+      </div>
+    </section>
+  </main>
+</div>

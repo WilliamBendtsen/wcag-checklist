@@ -1,0 +1,159 @@
+.guideline-container {
+  display: flex;
+  gap: 2rem;
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 24px 16px;
+}
+
+.sidebar {
+  width: 300px;
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  height: fit-content;
+}
+
+.sidebar h3 {
+  color: #2563eb;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 2px solid #e5e7eb;
+}
+
+.sidebar-nav {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar-nav li {
+  margin-bottom: 0.5rem;
+}
+
+.sidebar-nav a {
+  display: block;
+  padding: 0.5rem;
+  color: #4b5563;
+  text-decoration: none;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.sidebar-nav a:hover {
+  background: #f3f4f6;
+  color: #2563eb;
+}
+
+.sidebar-nav a.active {
+  background: #e5e7eb;
+  color: #1e40af;
+  font-weight: 500;
+}
+
+.guideline-detail {
+  flex: 1;
+  max-width: 1000px;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* Header styles */
+.guideline-header {
+  margin-bottom: 1rem;
+  display: flex;
+  justify-content: space-between;
+}
+
+.guideline-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.guideline-title a {
+  font-size: 1rem;
+  font-weight: lighter;
+}
+
+.guideline-header label {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.guideline-header input {
+  transform: scale(2);
+}
+
+/* Content cards */
+.content-card {
+  background-color: white;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  padding: 24px;
+  margin-bottom: 24px;
+  overflow: hidden;
+}
+
+.guideline-description {
+  font-size: 18px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  color: var(--color-text-primary);
+}
+
+.guideline-section {
+  margin-bottom: 24px;
+}
+
+.guideline-section h3 {
+  font-size: 20px;
+  font-weight: 600;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+.guideline-section p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--color-text-secondary);
+}
+
+/* Examples */
+.examples-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 24px;
+}
+
+.example-card {
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 16px;
+  background-color: var(--color-background-light);
+}
+
+.example-card h3 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-top: 0;
+  margin-bottom: 12px;
+  color: var(--color-text-primary);
+}
+
+/* Fade in animation when clicking on card */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

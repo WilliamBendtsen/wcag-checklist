@@ -1,11 +1,47 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GuidelinesService } from '../../services/guidelines.service';
+import { Guideline } from '../../models/guideline.model';
+import { NgFor } from '@angular/common';
+import { ActivatedRoute, RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-guideline-311',
-  imports: [],
+  imports: [NgFor, RouterLink],
   templateUrl: './guideline-311.component.html',
-  styleUrl: './guideline-311.component.css'
+  styleUrl: './guideline-311.component.css',
 })
-export class Guideline311Component {
+export class Guideline311Component implements OnInit {
+  fulfilled = false;
+  guidelines: Guideline[] = [];
+  sourcePage: string = '';
+  pageTitle: string = '';
 
+  constructor(
+    private guidelinesService: GuidelinesService,
+    private route: ActivatedRoute
+  ) {}
+
+  ngOnInit() {
+    this.guidelinesService
+      .getFulfilledState('3.1.1')
+      .subscribe((state) => (this.fulfilled = state));
+
+    // Get the source page from the query params
+    this.route.queryParams.subscribe((params) => {
+      this.sourcePage = params['from'] || 'dashboard';
+      this.pageTitle = this.sourcePage
+        .split('-')
+        .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(' ');
+      this.guidelines = this.guidelinesService.getGuidelinesForPage(
+        this.sourcePage
+      );
+    });
+  }
+
+  onFulfilledChange(event: Event) {
+    const checked = (event.target as HTMLInputElement).checked;
+    this.fulfilled = checked; // Update local state immediately
+    this.guidelinesService.setFulfilledState('3.1.1', checked);
+  }
 }
