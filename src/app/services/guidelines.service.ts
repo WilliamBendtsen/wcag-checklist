@@ -1,6 +1,7 @@
-import { Injectable } from '@angular/core';
+import { Injectable, PLATFORM_ID, Inject } from '@angular/core';
 import { Guideline } from '../models/guideline.model';
 import { BehaviorSubject, Observable } from 'rxjs';
+import { isPlatformBrowser } from '@angular/common';
 
 @Injectable({
   providedIn: 'root',
@@ -549,7 +550,7 @@ export class GuidelinesService {
     [key: string]: boolean;
   }>({});
 
-  constructor() {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {
     // Initialize the BehaviorSubject with any saved state (could be from localStorage)
     const savedState = this.getSavedState();
     if (savedState) {
@@ -615,13 +616,17 @@ export class GuidelinesService {
     }
   }
 
-  // Optional: Save state to localStorage for persistence
   private saveState(state: { [key: string]: boolean }) {
-    localStorage.setItem('guidelineFulfilledState', JSON.stringify(state));
+    if (isPlatformBrowser(this.platformId)) {
+      localStorage.setItem('guidelineFulfilledState', JSON.stringify(state));
+    }
   }
 
   private getSavedState(): { [key: string]: boolean } | null {
-    const saved = localStorage.getItem('guidelineFulfilledState');
-    return saved ? JSON.parse(saved) : null;
+    if (isPlatformBrowser(this.platformId)) {
+      const saved = localStorage.getItem('guidelineFulfilledState');
+      return saved ? JSON.parse(saved) : null;
+    }
+    return null;
   }
 }
