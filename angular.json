@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-tour-of-heroes": {
+    "wcag-checklist": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -40,6 +40,7 @@
           },
           "configurations": {
             "production": {
+              "baseHref": "/wcag-checklist/",
               "budgets": [
                 {
                   "type": "initial",
@@ -95,6 +96,9 @@
             "styles": ["src/styles.css"],
             "scripts": []
           }
+        },
+        "deploy": {
+          "builder": "angular-cli-ghpages:deploy"
         }
       }
     }
