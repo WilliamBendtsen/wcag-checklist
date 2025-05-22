@@ -67,10 +67,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "angular-tour-of-heroes:build:production"
+              "buildTarget": "wcag-checklist:build:production"
             },
             "development": {
-              "buildTarget": "angular-tour-of-heroes:build:development"
+              "buildTarget": "wcag-checklist:build:development"
             }
           },
           "defaultConfiguration": "development"
